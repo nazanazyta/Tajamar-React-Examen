@@ -10,7 +10,8 @@ export default class Serie extends Component {
         , status: false
     }
 
-    mostrarSerie = () => {
+    mostrarSerie = (e) => {
+        e.preventDefault();
         var request = "api/series/" + this.props.id;
         var url = Global.urlseries + request;
         axios.get(url).then(res => {
@@ -32,6 +33,7 @@ export default class Serie extends Component {
                 (
                     <React.Fragment>
                         <h1>Hola</h1>
+                        <img src="{this.state.serie.imagen}" />
                         {/* <br />
                         <img src="{serie.imagen}" />
                         <NavLink to="/" className="btn btn-sm btn-dark">Listado</NavLink>

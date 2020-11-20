@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import MenuSeries from './Series/MenuSeries';
 import Serie from './Series/Serie';
+import InsertarPersonaje from './Series/InsertarPersonaje';
 
 export default class Router extends Component {
     render() {
@@ -11,6 +12,7 @@ export default class Router extends Component {
                     <MenuSeries />
                     <Switch>
                         <Route exact path="/serie/:id" component={Serie} />
+                        <Route exact path="/insertar" component={InsertarPersonaje} />
                         {/* <Route exact path="/" component={Peliculas} />
                         <Route exact path="/create" component={InsertarPelicula} />
                         <Route exact path="/detalles/:id" render={props => {
